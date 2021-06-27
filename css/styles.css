@@ -11031,6 +11031,5 @@ border-radius: 50%;
 justify-content: center;
 }
 .social-media {
-  border-radius: 50%;
-  background-color: transparent;
+ margin: 10px;
 }
