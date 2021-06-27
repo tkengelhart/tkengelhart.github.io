@@ -1,3 +1,3 @@
-## Portfolio Project
+## Portfolio
 
 tkengelhart.github.io
