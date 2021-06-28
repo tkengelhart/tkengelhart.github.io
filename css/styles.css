@@ -4255,15 +4255,18 @@ textarea.form-control-lg {
 }
 
 .card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
+  display: inline-block !important;
+  position:relative;
+  flex-direction:column;
+  min-width: 100;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  color: black;
+  margin: 50px;
+  text-align: center;
 }
 .card > hr {
   margin-right: 0;
@@ -7374,7 +7377,7 @@ textarea.form-control-lg {
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: white !important;
 }
 
 .text-black-50 {
@@ -10845,7 +10848,7 @@ body {
 }
 
 .page-section {
-  padding: 8rem 0;
+  padding: 0rem 0;
 }
 
 .text-white-75 {
@@ -10944,6 +10947,17 @@ header.masthead {
   background-attachment: scroll;
   background-size: cover;
 }
+
+footer.footer{
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/rodion-kutsaev-v1IQm8wYBus-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  color: white;
+}
 header.masthead h1, header.masthead .h1 {
   font-size: 2.25rem;
 }
@@ -10964,7 +10978,7 @@ header.masthead h1, header.masthead .h1 {
 @media (min-width: 1200px) {
   header.masthead h1, header.masthead .h1 {
     font-size: 3.5rem;
-  }
+
 }
 
 #portfolio .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl, #portfolio .container-xxl {
@@ -11032,4 +11046,5 @@ justify-content: center;
 }
 .social-media {
  margin: 10px;
+}
 }
