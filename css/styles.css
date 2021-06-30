@@ -559,11 +559,12 @@ progress {
 }
 
 .blockquote-footer {
-  margin-top: -1rem;
-  margin-bottom: 1rem;
+  margin-top: 3rem;
+  margin-bottom: .5rem;
   font-size: 1rem;
   color: black;
   font: kanit;
+  text-align: center;
 }
 .blockquote-footer::before {
   content: "— ";
@@ -10950,13 +10951,21 @@ header.masthead {
 
 footer.footer{
   padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
   background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/rodion-kutsaev-v1IQm8wYBus-unsplash.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
   color: white;
+}
+
+.footer-text {
+  text-align: center;
+  color: white;
+  font-family: syncopate;
+  font-size: 12px;
+  padding-top: 5px;
 }
 header.masthead h1, header.masthead .h1 {
   font-size: 2.25rem;
