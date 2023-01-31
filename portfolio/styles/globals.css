@@ -90,8 +90,10 @@ background-color: paper;
 }
 
 a {
-  color: '#f3e4d7';
+  color: #f3e4d7;
   text-decoration: none;
+  font-size: 30px;
+  text-align: center;
 }
 
 @media (prefers-color-scheme: dark) {

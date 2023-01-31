@@ -7,7 +7,7 @@ const Header = () => {
     return (
       <Box sx={{backgroundColor: theme.palette.primary.main, width: '100%', height: '500px', padding: '45px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
 
-        <Typography variant="h3" sx={{color: theme.palette.warning.main}}> Updates coming soon.</Typography>
+        <Typography variant="h3" component='div' sx={{color: theme.palette.warning.main}}> Updates coming soon.</Typography>
       </Box>
     );
 };
