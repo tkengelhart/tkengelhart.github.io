@@ -86,11 +86,11 @@ body {
 }
 
 body {
-background-color: #121f27;
+background-color: paper;
 }
 
 a {
-  color: inherit;
+  color: '#f3e4d7';
   text-decoration: none;
 }
 
