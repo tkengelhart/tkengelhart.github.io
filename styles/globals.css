@@ -87,6 +87,8 @@ body {
 
 body {
 background-color: paper;
+font-family:  'Genos' !important;
+
 }
 
 a {
@@ -101,3 +103,4 @@ a {
     color-scheme: dark;
   }
 }
+

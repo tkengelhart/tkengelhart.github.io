@@ -13,9 +13,7 @@ export default function Home() {
 				<title>Technical Tanya</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-<Header />
-<Project />
-<Footer />
+
 
         </>
 

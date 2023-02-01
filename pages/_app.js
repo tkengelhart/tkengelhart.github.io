@@ -1,12 +1,16 @@
-import * as React from 'react';
-import Head from 'next/head';
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import { CacheProvider } from '@emotion/react';
-import theme from '../src/theme';
-import createEmotionCache from '../src/createEmotionCache';
-import style from '../styles/globals.css';
+import * as React from "react";
+import Head from "next/head";
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import { CacheProvider } from "@emotion/react";
+import theme from "../src/theme";
+import createEmotionCache from "../src/createEmotionCache";
+import style from "../styles/globals.css";
+import { Genos } from "@next/font/google";
+import Layout from '../components/Layout.jsx';
 
+
+const genos = Genos({ subsets: ["latin"], display: "swap" });
 
 // Client-side cache shared for the whole session
 // of the user in the browser.
@@ -14,26 +18,24 @@ import style from '../styles/globals.css';
 const clientSideEmotionCache = createEmotionCache();
 
 export default function MyApp(props) {
-	const { Component, emotionCache =
-		clientSideEmotionCache, pageProps } = props;
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
-	return (
-		<CacheProvider value={emotionCache}>
-			<Head>
-				<meta name="viewport"
-					content="initial-scale=1, width=device-width" />
-			</Head>
-			<ThemeProvider theme={theme}>
-				
-				{/* CssBaseline kickstart an elegant,
+  return (
+    <CacheProvider value={emotionCache}>
+      <Head>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </Head>
+      <div className={genos.className}>
+        <ThemeProvider theme={theme}>
+			<Layout>
+          {/* CssBaseline kickstart an elegant,
 				consistent, and simple baseline to
 				build upon. */}
-				
-				<CssBaseline />
-				<Component {...pageProps} />
-			</ThemeProvider>
-		</CacheProvider>
-	);
+          <CssBaseline />
+          <Component {...pageProps} />
+		  </Layout>
+        </ThemeProvider>
+      </div>
+    </CacheProvider>
+  );
 }
-
-
