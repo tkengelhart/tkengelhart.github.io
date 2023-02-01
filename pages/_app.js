@@ -7,7 +7,6 @@ import theme from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
 import style from "../styles/globals.css";
 import { Genos } from "@next/font/google";
-import Layout from '../components/Layout.jsx';
 
 
 const genos = Genos({ subsets: ["latin"], display: "swap" });
@@ -27,13 +26,11 @@ export default function MyApp(props) {
       </Head>
       <div className={genos.className}>
         <ThemeProvider theme={theme}>
-			<Layout>
           {/* CssBaseline kickstart an elegant,
 				consistent, and simple baseline to
 				build upon. */}
           <CssBaseline />
           <Component {...pageProps} />
-		  </Layout>
         </ThemeProvider>
       </div>
     </CacheProvider>

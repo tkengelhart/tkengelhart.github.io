@@ -18,6 +18,15 @@ const theme = createTheme({
 			main: '#f3e4d7',
 		}
 	},
+	components: {
+		MuiTypography: {
+			styleOverrides: {
+				root: {
+					fontFamily: 'Genos'
+				}
+		}
+	}
+},
 
 });
 
