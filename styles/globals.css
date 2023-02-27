@@ -102,3 +102,11 @@ a {
   }
 }
 
+
+
+.linkProps {
+  text-decoration: none !important;
+  color: inherit;
+  font-size: 20px;
+
+}
