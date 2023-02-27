@@ -23,7 +23,7 @@ const actions = [
   { icon: <Link className="linkProps" target="_blank" href="https://github.com/tkengelhart"><FontAwesomeIcon icon={faGithub}  /></Link>
   , name: "Github" },
   { icon: <Link className="linkProps" target="_blank" href="https://www.linkedin.com/in/tanyaengelhart/"><FontAwesomeIcon icon={faLinkedin}  /></Link>, name: "LinkedIn"},
-  { icon: <Link className="linkProps" target="_blank" href="mailto: tkengelhart@gmail.com"><FontAwesomeIcon icon={faEnvelope}  /></Link>, name: "Email" },
+  { icon: <Link className="linkProps" href="mailto: tkengelhart@gmail.com"><FontAwesomeIcon icon={faEnvelope}  /></Link>, name: "Email" },
   { icon: <Link className="linkProps"  target='_blank' href="https://drive.google.com/file/d/1ePU-kuP3ALjFKvV0m_WGJRLEHHuloaqC/view?usp=share_link"><FontAwesomeIcon icon={faFilePdf}  /></Link>, name: "Resume" }
 ];
 

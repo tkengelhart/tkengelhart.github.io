@@ -6,12 +6,9 @@ import { Box, Typography } from '@mui/material';
 const Project = () => {
     return (
 <>
-<Box sx={{color: theme.palette.warning.main, width: '100%', minHeight: '20%'}}>
-    <Typography variant="h1" component="div" sx={{color: theme.palette.error.main, textAlign: 'left', ml: 5 }}>updates coming soon</Typography>
-    <Typography variant="h4" component="div" sx={{color: theme.palette.error.main, textAlign: 'left', ml: 5 }}>In the meantime, please connect with me by visiting the links above.</Typography>
-
-
-
+<Box sx={{backgroundColor: theme.palette.warning.main, width: '100%'}}>
+    <Typography variant="h3" component="div" sx={{color: theme.palette.primary.main, textAlign: 'center', ml: 5, pb: 0}}>updates coming soon</Typography>
+    <Typography variant="h6" component="div" sx={{color: theme.palette.primary.main, textAlign: 'center', ml: 5, pb: 0}}>In the meantime, please connect with me by visiting the links above.</Typography>
 </Box>
 
 </>

@@ -6,8 +6,8 @@ import theme from '../src/theme';
 const Footer = () => {
     return (
         <>
-    <Box sx={{backgroundColor: theme.palette.error.main, position: "sticky", minHeight: '150px', width: '100%', alignmentBaseline: 'baseline'}}>
-    <Typography component='div' sx={{mt:19, color: theme.palette.primary.main, fontSize: '24px',  fontWeight: 'bold', textAlign: 'right', justifyContent: 'right', pr: 5, pt: 10}}>&copy; Technical Tanya, 2023</Typography>
+    <Box sx={{backgroundColor: theme.palette.error.main, width: '100%', pt: 40}}>
+    <Typography component='div' sx={{color: theme.palette.primary.main, fontSize: '24px',  fontWeight: 'bold', textAlign: 'right', justifyContent: 'right', pr: 5}}>&copy; Technical Tanya, 2023</Typography>
 </Box>
 
 </>
