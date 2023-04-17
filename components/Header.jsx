@@ -1,21 +1,22 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Stack } from '@mui/material';
 import theme from '../src/theme';
 import SpeedDial from './SpeedDial';
 
 const Header = () => {
     return (
       <>
-            <Box sx={{backgroundColor: theme.palette.primary.main, display: 'flex'}}>
-
       <SpeedDial />
-<Box sx={{width: '100%', height: '40%', justifyItems: 'center', alignItems: 'center', textAlign: 'center', paddingTop: '20px'}}>
+
+<Stack direction='column' sx={{backgroundColor: theme.palette.primary.main, textAlign: 'center', height: 200}}>
+
         <Typography variant="h3" component='div' sx={{color: theme.palette.warning.main}}> Tanya Engelhart</Typography>
         <Typography variant="h4" component='div' sx={{color: theme.palette.warning.main}}>software developer</Typography>
+       
 
-      </Box>
+        </Stack>
 
-      </Box>
+
       </>
     );
 };

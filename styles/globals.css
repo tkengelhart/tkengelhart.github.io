@@ -84,8 +84,8 @@ body {
 }
 
 body {
-background-color: paper;
 font-family:  'Genos' !important;
+background-color: '#f3e4d7';
 
 }
 
@@ -109,4 +109,8 @@ a {
   color: inherit;
   font-size: 20px;
 
+}
+
+img {
+  object-fit: contain;
 }

@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
 					<meta name="theme-color"
 						content={theme.palette.primary.main} />
 					<link rel="shortcut icon"
-						href="/static/favicon.ico" />
+						href="/static/monitor.ico" />
 					<link
 						rel="stylesheet"
 						href=

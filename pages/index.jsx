@@ -1,9 +1,9 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import { Typography } from "@mui/material";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Project from "../components/Project";
+import { Box, Stack} from '@mui/material';
+import theme from "../src/theme";
 
 
 
@@ -11,10 +11,13 @@ export default function Home() {
 	return (
     <>			<Head>
 				<title>Technical Tanya</title>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/monitor.ico" />
 			</Head>
-<Header />
+
+	<Header />
+
 <Project />
+
 <Footer />
 
         </>
