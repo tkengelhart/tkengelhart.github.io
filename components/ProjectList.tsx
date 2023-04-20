@@ -51,16 +51,13 @@ export default function ProjectList() {
                     fontWeight: "bolder",
                     color: theme.palette.warning.main,
                   }}
-                  variant="h6"
+                  variant="h4"
                 >
                   {item.name}
                 </Typography>
               }
               actionIcon={
-                <IconButton
-                  sx={{ color: "rgba(18,31,39, 0.8)" }}
-                  aria-label={`link to about ${item.name}`}
-                >
+                <IconButton aria-label={`link to about ${item.name}`}>
                   <LinkIcon />
                 </IconButton>
               }

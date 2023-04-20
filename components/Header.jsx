@@ -8,8 +8,8 @@ const Header = () => {
 
 <Stack direction='column' sx={{textAlign: 'center'}}>
 
-        <Typography variant="h3" component='div' sx={{color: theme.palette.warning.main}}> Tanya Engelhart</Typography>
-        <Typography variant="h4" component='div' sx={{color: theme.palette.warning.main}}>software developer</Typography>
+        <Typography variant="h3" component='div' sx={{color: theme.palette.warning.main, fontWeight: 'bolder'}}> Tanya Engelhart</Typography>
+        <Typography variant="h4" component='div' sx={{color: theme.palette.warning.main, fontWeight: 'bolder'}}>software developer</Typography>
        
 
         </Stack>

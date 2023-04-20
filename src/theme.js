@@ -4,16 +4,16 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#121f27",
+      main: "#171717",
     },
     secondary: {
-      main: "#1d666a",
+      main: "#444444",
     },
     error: {
-      main: "#bf523d",
+      main: "#F05454",
     },
     warning: {
-      main: "#f3e4d7",
+      main: "#EDEDED",
     },
   },
   components: {
@@ -34,7 +34,7 @@ const theme = createTheme({
     MuiFab: {
       styleOverrides: {
         root: {
-          backgroundColor: "#bf523d",
+          backgroundColor: "#F05454",
           fontFamily: "Genos",
         },
       },

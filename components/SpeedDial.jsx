@@ -31,7 +31,7 @@ export default function PlaygroundSpeedDial() {
 
   return (
     <Box sx={{ transform: "translateZ(0px)", flexGrow: 1 }}>
-      <Box sx={{ position: "relative", ml: 1 }}>
+      <Box sx={{ position: "absolute", ml: 2, mt: 7}}>
         <StyledSpeedDial
           ariaLabel="Connect"
           icon={<FontAwesomeIcon icon={faIdCard}  />}
