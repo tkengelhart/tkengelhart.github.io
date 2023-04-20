@@ -1,12 +1,10 @@
+import { Stack, Typography } from '@mui/material';
 import React from 'react';
-import { Box, Typography, Stack } from '@mui/material';
 import theme from '../src/theme';
-import SpeedDial from './SpeedDial';
 
 const Header = () => {
     return (
       <>
-      <SpeedDial />
 
 <Stack direction='column' sx={{backgroundColor: theme.palette.primary.main, textAlign: 'center', height: 200}}>
 

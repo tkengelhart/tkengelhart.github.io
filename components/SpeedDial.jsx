@@ -14,7 +14,6 @@ const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
   position: "absolute",
   "&.MuiSpeedDial-directionDown": {
     top: theme.spacing(2),
-    left: theme.spacing(2)
   }
 }));
 
@@ -32,7 +31,7 @@ export default function PlaygroundSpeedDial() {
 
   return (
     <Box sx={{ transform: "translateZ(0px)", flexGrow: 1 }}>
-      <Box sx={{ position: "relative", ml: 5 }}>
+      <Box sx={{ position: "relative", ml: 1 }}>
         <StyledSpeedDial
           ariaLabel="Connect"
           icon={<FontAwesomeIcon icon={faIdCard}  />}
