@@ -77,15 +77,14 @@
   margin: 0;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+html {
+  height: 100%;
 }
 
 body {
 font-family:  'Genos' !important;
 background-color: '#f3e4d7';
+min-height: 100%;
 
 }
 
@@ -114,3 +113,11 @@ a {
 img {
   object-fit: contain;
 }
+
+.footerStyle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+

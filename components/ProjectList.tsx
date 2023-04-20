@@ -1,16 +1,25 @@
-import { Button, Card, CardContent, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, Typography } from "@mui/material";
 import { motion, useCycle } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import theme from "../src/theme";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
+import ListSubheader from "@mui/material/ListSubheader";
+import IconButton from "@mui/material/IconButton";
+import InfoIcon from "@mui/icons-material/Info";
+import LinkIcon from "@mui/icons-material/Link";
+
 const projects = [
   {
     name: "Seed to Feed",
     image: "./photos/seedtofeed.jpg",
     link: "https://github.com/Seed-to-Feed/seedtofeed",
   },
+
   {
     name: "React Calculator",
     image: "./photos/calculator.jpg",
@@ -24,66 +33,41 @@ const projects = [
 ];
 
 export default function ProjectList() {
-  const [projectIndex, cycleProjects] = useCycle(0, 1, 2);
-
   return (
-    <>
-      <motion.div
-        animate={{
-          x: `-${projectIndex * 100}%`,
-
-        }}
-        style={{
-          display: "flex",
-          width: "100%",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
-        {projects.map((project, index) => (
-          <motion.div
-            key={index}
-            style={{
-              left: `${index * 100}%`,
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              overflow: 'hidden'
-            }}
-            animate={{
-              left: `${-projectIndex * 100}%`,
-            }}
-            transition={{ duration: 0.5 }}
-          >
-            <Card
-              style={{
-                border: 1,
-                borderColor: theme.palette.primary.main,
-              }}
-            >
-              <CardContent>
+    <ImageList cols={3} gap={10} rowHeight={500}>
+      {projects.map((item) => (
+        <Link href={item.link} passHref target="_blank">
+          <ImageListItem key={item.image} rows={1} cols={1}>
+            <img
+              src={`${item.image}?w=248&fit=crop&auto=format`}
+              srcSet={`${item.image}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              alt={item.name}
+              loading="lazy"
+            />
+            <ImageListItemBar
+              title={
                 <Typography
-                  variant="h6"
                   sx={{
-                    fontWeight: "bold",
-                    color: theme.palette.error.main,
+                    fontWeight: "bolder",
+                    color: theme.palette.warning.main,
                   }}
+                  variant="h6"
                 >
-                  {project.name}
+                  {item.name}
                 </Typography>
-
-                <Link href={project.link} target="_blank" passHref>
-                  <img src={`/${project.image}`} height={200} width={200} />
-                </Link>
-              </CardContent>
-            </Card>
-          </motion.div>
-        ))}
-      </motion.div>
-      <div style={{ textAlign: "center", marginTop: "1rem" }}>
-        <Button onClick={() => cycleProjects(-1)}><ChevronLeftIcon /></Button>
-        <Button onClick={() => cycleProjects(1)}><ChevronRightIcon /></Button>
-      </div>
-    </>
+              }
+              actionIcon={
+                <IconButton
+                  sx={{ color: "rgba(18,31,39, 0.8)" }}
+                  aria-label={`link to about ${item.name}`}
+                >
+                  <LinkIcon />
+                </IconButton>
+              }
+            />
+          </ImageListItem>
+        </Link>
+      ))}
+    </ImageList>
   );
 }

@@ -18,8 +18,7 @@ export default class MyDocument extends Document {
           />
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
           {this.props.emotionStyleTags}
-          <title>Technical Tanya</title>
-          <link rel="icon" href="/monitor.ico" />
+
         </Head>
         <body>
           <Main />

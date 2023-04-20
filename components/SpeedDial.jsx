@@ -12,7 +12,7 @@ import theme from '../src/theme';
 
 const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
   position: "absolute",
-  "&.MuiSpeedDial-directionDown": {
+  "&.MuiSpeedDial-directionRight": {
     top: theme.spacing(2),
   }
 }));
@@ -27,7 +27,7 @@ const actions = [
 ];
 
 export default function PlaygroundSpeedDial() {
-  const direction = "down";
+  const direction = "right";
 
   return (
     <Box sx={{ transform: "translateZ(0px)", flexGrow: 1 }}>
