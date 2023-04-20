@@ -11,6 +11,8 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
+   
+
           <link rel="shortcut icon" href="/static/monitor.ico" />
           <link
             rel="stylesheet"
@@ -18,7 +20,6 @@ export default class MyDocument extends Document {
           />
           {/* Inject MUI styles first to match with the prepend: true configuration. */}
           {this.props.emotionStyleTags}
-
         </Head>
         <body>
           <Main />

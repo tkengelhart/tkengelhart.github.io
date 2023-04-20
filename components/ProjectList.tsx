@@ -34,15 +34,17 @@ const projects = [
 
 export default function ProjectList() {
   return (
-    <ImageList cols={3} gap={10} rowHeight={500}>
+    <ImageList cols={3} gap={10} rowHeight={700}>
       {projects.map((item) => (
-        <Link href={item.link} passHref target="_blank">
-          <ImageListItem key={item.image} rows={1} cols={1}>
+        <Link key={item.link} href={item.link} passHref target="_blank">
+          <ImageListItem key={item.image} rows={1} cols={1} sx={{width: "100%", height: "100%"}}>
             <img
               src={`${item.image}?w=248&fit=crop&auto=format`}
               srcSet={`${item.image}?w=248&fit=crop&auto=format&dpr=2 2x`}
               alt={item.name}
               loading="lazy"
+              style={{width: "100%", height: "100%"}}
+
             />
             <ImageListItemBar
               title={
