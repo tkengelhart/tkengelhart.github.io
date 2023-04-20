@@ -17,6 +17,7 @@ const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
   }
 }));
 
+const mainAction = { icon: "Contact" };
 
 const actions = [
   { icon: <Link className="linkProps" target="_blank" href="https://github.com/tkengelhart"><FontAwesomeIcon icon={faGithub}  /></Link>
@@ -37,7 +38,7 @@ export default function PlaygroundSpeedDial() {
       <Box sx={{ position: "absolute", ml: 2, mt: 7}}>
         <StyledSpeedDial
           ariaLabel="Connect"
-          icon={<FontAwesomeIcon icon={faIdCard}  />}
+          icon={mainAction.icon}
           direction={direction}
         >
           {actions.map((action) => (            <SpeedDialAction
