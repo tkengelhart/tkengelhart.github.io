@@ -2,12 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 import theme from '../src/theme';
 import { Box, Typography } from '@mui/material';
-import Scroller from '../components/Scroller';
+import ProjectList from '../components/ProjectList';
 
 const Project = () => {
     return (
 <>
-<Scroller />
+<ProjectList />
 
 </>
     );
