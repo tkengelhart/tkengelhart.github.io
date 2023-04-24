@@ -23,35 +23,59 @@ const projects = [
   {
     name: "React Calculator",
     image: "./photos/calculator.jpg",
-    link: "https://github.com/tkengelhart/react-calculator",
+    link: "https://exquisite-bubblegum-181887.netlify.app/",
   },
   {
     name: "WeGo Travel",
     image: "./photos/travel.jpg",
     link: "https://github.com/tkengelhart/wego_travel",
   },
+  {
+    name: "Nail color randomizer",
+    image: "./photos/nails.jpg",
+    link: "https://main--extraordinary-sorbet-2bdb2f.netlify.app/",
+  },
 ];
 
 export default function ProjectList() {
   return (
-    <ImageList cols={3} gap={10} rowHeight={500}>
+    <ImageList
+      sx={{
+        display: "flex",
+        width: "100%",
+        height: 450,
+        textAlign: "center",
+        pl: 20,
+        pr: 20,
+        pt: 15,
+        justifyContent: "space-evenly",
+      }}
+      cols={2}
+      rowHeight={200}
+    >
       {projects.map((item) => (
         <Link href={item.link} passHref target="_blank">
-          <ImageListItem key={item.image} rows={1} cols={1}>
+          <ImageListItem
+            key={item.image}
+            sx={{ height: 200, width: 200 }}
+            object-fit="cover"
+          >
             <img
-              src={`${item.image}?w=248&fit=crop&auto=format`}
-              srcSet={`${item.image}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.image}?w=200&h=200`}
+              srcSet={`${item.image}?w=200&h=200`}
               alt={item.name}
               loading="lazy"
+              sizes="(max-height: 200px)"
             />
             <ImageListItemBar
+              sx={{ justifyItems: "center", alignItems: "center" }}
               title={
                 <Typography
                   sx={{
                     fontWeight: "bolder",
                     color: theme.palette.warning.main,
                   }}
-                  variant="h4"
+                  variant="h6"
                 >
                   {item.name}
                 </Typography>
