@@ -36,6 +36,8 @@ const theme = createTheme({
         root: {
           backgroundColor: "#F05454",
           fontFamily: "Genos",
+          fontSize: 14,
+          fontWeight: "bolder",
         },
       },
     },

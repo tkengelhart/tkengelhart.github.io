@@ -14,18 +14,18 @@ export default function Home() {
       <link rel="icon" href="/monitor.ico" />
     </Head>
 
-<Box sx={{height: '100%'}}>
+<Box sx={{display: 'flex'}}>
 
-        <Box sx={{ backgroundColor: theme.palette.primary.main, height: 200, minWidth: '5%'}}>
+        <Box sx={{ backgroundColor: theme.palette.primary.main, width: '100%', height: '30%'}}>
          
          <SpeedDial />
           
           <Box
             sx={{
-              minWidth: "25%",
               justifyContent: 'center',
               pt: 1,
-              pb: 4
+              pb: 4,
+              height: '100%'
          
             }}
           >
@@ -33,10 +33,15 @@ export default function Home() {
           </Box>
 
           <Box
+            className="projectStyle"
+
  sx={{
   backgroundColor: theme.palette.secondary.main,
+  display: 'flex',
   padding: 5,
-  height: 600,
+  flexGrow: 1,
+  maxHeight: '50%'
+  
 }}          >
             <Project />
 
@@ -45,7 +50,7 @@ export default function Home() {
           className="footerStyle"
             sx={{
               justifyContent: "flex-end",
-          
+              backgroundColor: theme.palette.error.main
             }}
           >
             <Footer />
