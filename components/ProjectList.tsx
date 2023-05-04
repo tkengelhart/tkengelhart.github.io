@@ -31,7 +31,7 @@ const projects = [
     link: "https://github.com/tkengelhart/wego_travel",
   },
   {
-    name: "Nail color randomizer",
+    name: "Pick Your Polish",
     image: "./photos/nails.jpg",
     link: "https://main--extraordinary-sorbet-2bdb2f.netlify.app/",
   },
