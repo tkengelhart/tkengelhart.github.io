@@ -59,11 +59,12 @@ export default function App() {
             initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -10, opacity: 0 }}
-            transition={{ ease: "anticipate", duration: 2 }}
+            style={{ justifyContent: "center" }}
+            transition={{ ease: "anticipate" }}
           >
             <Link href={selectedTab.link} target="_blank">
               <motion.img
-                key={selectedTab.name}
+                key={selectedTab ? selectedTab.name : "empty"}
                 src={selectedTab.image}
                 width={400}
                 height={400}

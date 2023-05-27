@@ -9,10 +9,12 @@ const Header = () => {
         direction="column"
         sx={{
           textAlign: "right",
+          right: 3,
+          position: "fixed",
           marginRight: 3,
-          padding: 0,
           marginTop: 1,
           flexWrap: true,
+          maxWidth: "35%",
         }}
       >
         <Typography
@@ -20,7 +22,7 @@ const Header = () => {
           component="div"
           sx={{ color: theme.palette.warning.main, fontWeight: "bolder" }}
         >
-          Tanya Engelhart{" "}
+          Tanya Engelhart
         </Typography>
         <Typography
           variant="h5"
