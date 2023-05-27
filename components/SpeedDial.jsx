@@ -61,7 +61,7 @@ const actions = [
       <Link
         className="linkProps"
         target="_blank"
-        href="https://drive.google.com/file/d/1ePU-kuP3ALjFKvV0m_WGJRLEHHuloaqC/view?usp=share_link"
+        href="https://drive.google.com/file/d/1Jx_awWidMr2_mxJZj1t9dwHe1ylSHrzo/view?usp=sharing"
       >
         <FontAwesomeIcon icon={faFilePdf} />
       </Link>
