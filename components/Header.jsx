@@ -7,7 +7,13 @@ const Header = () => {
     <>
       <Stack
         direction="column"
-        sx={{ textAlign: "right", marginRight: 3, padding: 0, marginTop: 1 }}
+        sx={{
+          textAlign: "right",
+          marginRight: 3,
+          padding: 0,
+          marginTop: 1,
+          flexWrap: true,
+        }}
       >
         <Typography
           variant="h3"

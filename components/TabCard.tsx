@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { initialProjects as tabs } from "./ProjectList";
+import { initialProjects as tabs, projects } from "./ProjectList";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Box, Typography } from "@mui/material";
@@ -12,6 +12,16 @@ export default function App() {
 
   return (
     <div className="window">
+      <Typography
+        variant="h4"
+        sx={{
+          marginLeft: 3,
+          color: theme.palette.warning.main,
+          fontWeight: "bolder",
+        }}
+      >
+        Projects
+      </Typography>
       <nav>
         <ul>
           {tabs.map((item) => (
@@ -38,15 +48,15 @@ export default function App() {
             initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -10, opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ ease: "anticipate", duration: 2 }}
           >
             <Link href={selectedTab.link} target="_blank">
               <motion.img
                 key={selectedTab.name}
                 src={selectedTab.image}
-                width={500}
-                height={500}
-                initial={{ opacity: 0.5 }}
+                width={400}
+                height={400}
+                initial={{ opacity: 0.4 }}
                 title={selectedTab.about}
               />
             </Link>
