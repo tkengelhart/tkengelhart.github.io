@@ -36,8 +36,20 @@ const theme = createTheme({
         root: {
           backgroundColor: "#F05454",
           fontFamily: "Genos",
-          fontSize: 14,
+          fontSize: 18,
           fontWeight: "bolder",
+        },
+      },
+    },
+    MuiSpeedDial: {
+      styleOverrides: {
+        fab: {
+          fontFamily: "Genos",
+          fontWeight: "bolder",
+          height: 75,
+          width: 75,
+          border: "1px solid white",
+          ariaLabel: "Contact Me",
         },
       },
     },

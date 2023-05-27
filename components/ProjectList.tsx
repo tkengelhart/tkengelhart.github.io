@@ -1,94 +1,44 @@
-import { Box, Button, Card, CardContent, Typography } from "@mui/material";
-import { motion, useCycle } from "framer-motion";
-import Link from "next/link";
-import React from "react";
-import theme from "../src/theme";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
-import ImageListItemBar from "@mui/material/ImageListItemBar";
-import ListSubheader from "@mui/material/ListSubheader";
-import IconButton from "@mui/material/IconButton";
-import InfoIcon from "@mui/icons-material/Info";
-import LinkIcon from "@mui/icons-material/Link";
-
-const projects = [
+export interface Project {
+  name: string;
+  image: string;
+  link: string;
+}
+export const projects = [
   {
     name: "Seed to Feed",
-    image: "./photos/seedtofeed.jpg",
+    image: "/photos/seedtofeed.jpg",
     link: "https://github.com/Seed-to-Feed/seedtofeed",
+    about:
+      "Final project for EDA.  My cohort worked with the client from start to finish to produce this application.  I worked on frontend development and ensuring the color and image story matched the branding of our client's company.  I also worked on the API connection to get get information from the elevator tickets.",
   },
 
   {
     name: "React Calculator",
-    image: "./photos/calculator.jpg",
+    image: "/photos/calculator.jpg",
     link: "https://exquisite-bubblegum-181887.netlify.app/",
+    about: "Simple calculator I re-made using React framework.",
   },
   {
     name: "WeGo Travel",
-    image: "./photos/travel.jpg",
+    image: "/photos/travel.jpg",
     link: "https://github.com/tkengelhart/wego_travel",
+    about:
+      "My solo project for EDA.  This was a CRUD application that was designed for larger groups to organize travel plans.",
   },
   {
-    name: "Nail color randomizer",
-    image: "./photos/nails.jpg",
+    name: "Pick Your Polish",
+    image: "/photos/nails.jpg",
     link: "https://main--extraordinary-sorbet-2bdb2f.netlify.app/",
+    about:
+      "Application that randomizes my nail polish options.  I made this project as a way to organize my collection, but moreso to test out Next.js and Tailwind CSS",
   },
 ];
 
-export default function ProjectList() {
-  return (
-    <ImageList
-      sx={{
-        display: "flex",
-        width: "100%",
-        height: 450,
-        textAlign: "center",
-        pl: 20,
-        pr: 20,
-        pt: 15,
-        justifyContent: "space-evenly",
-      }}
-      cols={2}
-      rowHeight={200}
-    >
-      {projects.map((item) => (
-        <Link href={item.link} passHref target="_blank">
-          <ImageListItem
-            key={item.image}
-            sx={{ height: 200, width: 200 }}
-            object-fit="cover"
-          >
-            <img
-              src={`${item.image}?w=200&h=200`}
-              srcSet={`${item.image}?w=200&h=200`}
-              alt={item.name}
-              loading="lazy"
-              sizes="(max-height: 200px)"
-            />
-            <ImageListItemBar
-              sx={{ justifyItems: "center", alignItems: "center" }}
-              title={
-                <Typography
-                  sx={{
-                    fontWeight: "bolder",
-                    color: theme.palette.warning.main,
-                  }}
-                  variant="h6"
-                >
-                  {item.name}
-                </Typography>
-              }
-              actionIcon={
-                <IconButton aria-label={`link to about ${item.name}`}>
-                  <LinkIcon />
-                </IconButton>
-              }
-            />
-          </ImageListItem>
-        </Link>
-      ))}
-    </ImageList>
-  );
+const [seed, calculator, travel, polish] = projects;
+
+export const initialProjects = [seed, calculator, travel, polish];
+
+export function getNextProject(projects: Project[]): Project | undefined {
+  const current = new Set(projects);
+  return projects.find((project) => !current.has(project));
 }
