@@ -21,6 +21,17 @@ export default function App() {
         }}
       >
         Projects
+      </Typography>{" "}
+      <br />
+      <Typography
+        variant="subtitle1"
+        sx={{
+          marginLeft: 3,
+          color: theme.palette.warning.main,
+          fontWeight: "bolder",
+        }}
+      >
+        click on the project photo to view.
       </Typography>
       <nav>
         <ul>
