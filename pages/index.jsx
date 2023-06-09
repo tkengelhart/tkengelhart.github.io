@@ -1,7 +1,7 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Project from "../components/Project";
-import { Box } from "@mui/material";
+import { Grid } from "@mui/material";
 import theme from "../src/theme";
 import SpeedDial from "../components/SpeedDial";
 import Head from "next/head";
@@ -15,13 +15,12 @@ export default function Home() {
         <title>Technical Tanya</title>
         <link rel="icon" href="/monitor.ico" />
       </Head>
-      <Box sx={{ pr: 10, pl: 10, overflow: "scroll", position: "relative" }}>
+      <Grid container sx={{pr: 10, pl: 10, pt: 5}}>
         <Header />
         <Project />
         <Skills />
-      </Box>
-
       <Footer />
+      </Grid>
     </>
   );
 }

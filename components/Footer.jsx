@@ -1,24 +1,145 @@
-import { Box } from "@mui/material";
-import React from "react";
-import MenuBar from "../components/MenuBar";
+import Button from "@mui/material/Button";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
+import Link from "next/link";
+import * as React from "react";
 import theme from "../src/theme";
 
-const Footer = () => {
+const pages = [
+  {
+    name: (
+      <Link
+        className="linkProps"
+        target="_blank"
+        href="https://github.com/tkengelhart"
+      >
+        <Typography
+          sx={{ color: theme.palette.warning.main, fontWeight: "bolder" }}
+          variant="h6"
+        >
+          Github
+        </Typography>
+      </Link>
+    ),
+  },
+  {
+    name: (
+      <Link
+        className="linkProps"
+        target="_blank"
+        href="https://www.linkedin.com/in/tanyaengelhart/"
+      >
+        {" "}
+        <Typography
+          sx={{ color: theme.palette.warning.main, fontWeight: "bolder" }}
+          variant="h6"
+        >
+          LinkedIn
+        </Typography>
+      </Link>
+    ),
+  },
+  {
+    name: (
+      <Link className="linkProps" href="mailto: tkengelhart@gmail.com">
+        <Typography
+          sx={{ color: theme.palette.warning.main, fontWeight: "bolder" }}
+          variant="h6"
+        >
+          Email
+        </Typography>
+      </Link>
+    ),
+  },
+  {
+    name: (
+      <Link
+        className="linkProps"
+        target="_blank"
+        href="https://drive.google.com/file/d/1Jx_awWidMr2_mxJZj1t9dwHe1ylSHrzo/view?usp=sharing"
+      >
+        <Typography
+          sx={{ color: theme.palette.warning.main, fontWeight: "bolder" }}
+          variant="h6"
+        >
+          Resume
+        </Typography>
+      </Link>
+    ),
+  },
+  {
+    name: (
+      <Link
+        className="linkProps"
+        target="_blank"
+        href="https://calendly.com/technicaltanya"
+      >
+        <Typography
+          sx={{ color: theme.palette.warning.main, fontWeight: "bolder" }}
+          variant="h6"
+        >
+          Schedule
+        </Typography>
+      </Link>
+    ),
+  },
+];
+function Footer() {
   return (
     <>
-      <Box
+  
+      <Toolbar
+        disableGutters
+        width="100%"
+      >
+                <Grid
         className="footerStyle"
+        container spacing={{ xs: 1, md: 2 }} columns={{ xs: 2, sm: 4, md: 12 }}
         sx={{
           backgroundColor: theme.palette.error.main,
-          pr: 3,
-          pl: 3,
-          position: "fixed",
+         justifyContent: 'space-evenly',
+         alignItems: 'flex-end'
+
         }}
       >
-        <MenuBar />
-      </Box>
+        <Typography
+          variant="h4"
+          sx={{
+            color: theme.palette.warning.main,
+            fontWeight: "bolder",
+          }}
+        >
+          Contact
+        </Typography>
+        {pages.map((page, i) => (
+          <Button
+            key={i}
+            sx={{ my: 2, color: theme.palette.warning.main, display: "block", p: 0, m: 0 }}
+            onClick={(e) => {
+              e.stopPropagation();
+              {
+                page.link;
+              }
+            }}
+          >
+            {page.name}
+          </Button>
+        ))}
+               <Typography
+          sx={{
+            color: theme.palette.warning.main,
+            fontWeight: "bolder",
+          }}
+          variant="subtitle1"
+        >
+          &copy; Technical Tanya, 2023
+        </Typography>
+          </Grid>
+        
+            </Toolbar>
+      
     </>
   );
-};
-
+}
 export default Footer;

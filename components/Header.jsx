@@ -1,16 +1,15 @@
-import { Stack, Typography, Box } from "@mui/material";
+import { Stack, Typography, Grid } from "@mui/material";
 import React from "react";
 import theme from "../src/theme";
 
 const Header = () => {
   return (
     <>
-      <Stack
-        direction="column"
+      <Grid container direction="column" spacing={{ xs: 2, md: 3 }} columns={{ xs: 2, sm: 4, md: 12 }} 
         sx={{
           marginTop: 1,
-          flexWrap: true,
           textAlign: "left",
+          alignItems: 'flex-start'
         }}
       >
         <Typography
@@ -23,11 +22,11 @@ const Header = () => {
         <Typography
           variant="h5"
           component="div"
-          sx={{ color: theme.palette.warning.main, fontWeight: "bolder" }}
+          sx={{ color: theme.palette.error.main, fontWeight: "bolder" }}
         >
           full stack software developer
         </Typography>
-      </Stack>
+      </Grid>
     </>
   );
 };

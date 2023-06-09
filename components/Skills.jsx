@@ -15,20 +15,17 @@ import {
   faTrello,
   faBootstrap,
 } from "@fortawesome/free-brands-svg-icons";
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography, Grid } from "@mui/material";
 
 export const Skills = () => {
   return (
     <>
-      <Stack
-        direction="row"
-        spacing={7}
-        sx={{
-          opacity: 0.25,
-          justifyContent: "space-between",
-          paddingBottom: 2,
-        }}
-      >
+     <Grid         container spacing={{ xs: 1, md: 2 }} columns={{ xs: 2, sm: 4, md: 12 }}
+ sx={{justifyContent: 'space-evenly', alignItems: 'flex-end'          ,
+     opacity: 0.5,
+
+}}>
+    
         <Typography
           variant="h5"
           style={{
@@ -87,7 +84,7 @@ export const Skills = () => {
           icon={faBootstrap}
           style={{ color: theme.palette.error.main, fontSize: "35px" }}
         />
-      </Stack>
+      </Grid>
     </>
   );
 };

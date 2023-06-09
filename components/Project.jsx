@@ -1,6 +1,4 @@
-import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Button, Grid, Typography, Divider } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 import theme from "../src/theme";
@@ -9,69 +7,55 @@ import { projects } from "./ProjectList";
 export const Project = () => {
   return (
     <>
-      <Stack
-        sx={{ mt: 2, textAlign: "left", justifyItems: "left", spacing: 1 }}
-      >
-        <Typography
+    
+    <Grid container spacing={{ xs: 1, md: 2 }} columns={{ xs: 2, sm: 4, md: 12 }}
+      direction="column" sx={{pt: 5, pl: 5}}>     
+          
+          <Typography
           variant="h4"
           sx={{
-            color: theme.palette.error.main,
+            color: theme.palette.warning.main,
             fontWeight: "bolder",
-            mb: 2,
           }}
         >
           Projects
         </Typography>
 
-        {projects &&
+
+           {projects &&
           projects.map((project, i) => (
-            <>
-              <Box
-                key={i}
-                sx={{
-                  display: "inline-block",
-                  mr: 20,
-                  ml: 20,
-                  overflow: "scroll",
-                }}
-              >
-                <Link
-                  key={project.name}
+       <>
+          <Link
+          key={i}
                   className="projectList"
                   target="_blank"
                   href={project.link}
                   prefetch={false}
                   passHref={true}
                 >
-                  {project.name}
+          <Grid key={project.about} item  xs={1} sm={2} md={4}
 
-                  {/* <FontAwesomeIcon
-                  icon={faLink}
-                  size="2xs"
-                  style={{
-                    color: theme.palette.error.main,
-                    textAlign: " right",
-                    marginLeft: "10px",
-                  }}
-                /> */}
-                  <Box
-                    sx={{
-                      ml: 30,
-                      mt: -4,
-                      mb: 2,
-                      justifyContent: "left",
-                    }}
-                  >
+            sx={{justifyContent: 'left'}}
+             > <Typography
+             variant="h6"
+             sx={{
+               color: theme.palette.error.main,
+               fontWeight: "bolder",
+             }}
+           >
+                  {project.name}
+                  </Typography>
                     <Typography
                       variant="h6"
                       sx={{
                         color: theme.palette.warning.main,
                         fontWeight: "bolder",
-                        textAlign: "left",
                       }}
                     >
                       {project.about}
                     </Typography>
+                    </Grid>
+
                     <Button
                       variant="text"
                       sx={{
@@ -84,19 +68,23 @@ export const Project = () => {
                         variant="subtitle1"
                         sx={{
                           fontWeight: "bolder",
-                          textAlign: "left",
                         }}
                       >
                         {project.tech}
                       </Typography>
                     </Button>
-                  </Box>
-                </Link>
-              </Box>
-            </>
-          ))}
-      </Stack>
-    </>
+                    </Link>
+<Divider key={project.name} sx={{color: theme.palette.warning.main}} />
+</>
+                     ))}
+
+</Grid>
+              
+                          
+
+         
+              </>
+
   );
 };
 
