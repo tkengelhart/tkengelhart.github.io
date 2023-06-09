@@ -1,16 +1,34 @@
-import { Box, Typography } from '@mui/material';
-import React from 'react';
+import { Box, Typography } from "@mui/material";
+import React from "react";
 
-import theme from '../src/theme';
+import theme from "../src/theme";
 
 const Footer = () => {
-    return (
-        <>
-    <Typography component='div' sx={{color: theme.palette.warning.main, fontSize: '24px',  fontWeight: 'bold', textAlign: 'right', justifyContent: 'right', pr: 5}}>&copy; Technical Tanya, 2023</Typography>
-
-</>
-
-    );
+  return (
+    <>
+      <Box
+        className="footerStyle"
+        sx={{
+          justifyContent: "flex-end",
+          backgroundColor: theme.palette.error.main,
+        }}
+      >
+        <Typography
+          component="div"
+          sx={{
+            color: theme.palette.warning.main,
+            fontSize: "24px",
+            fontWeight: "bold",
+            textAlign: "right",
+            justifyContent: "right",
+            pr: 5,
+          }}
+        >
+          &copy; Technical Tanya, 2023
+        </Typography>
+      </Box>
+    </>
+  );
 };
 
 export default Footer;
