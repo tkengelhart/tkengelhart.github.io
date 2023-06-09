@@ -21,8 +21,8 @@ export const Skills = () => {
   return (
     <>
      <Grid         container spacing={{ xs: 1, md: 2 }} columns={{ xs: 2, sm: 2, md: 4 }}
- sx={{justifyContent: 'space-evenly', alignItems: 'flex-end',
-     opacity: 0.5, zIndex: 10
+ sx={{justifyContent: 'space-evenly', alignItems: 'flex-end', pt: 3,
+     opacity: 0.4, zIndex: 10
 }}>
     
         <Typography
