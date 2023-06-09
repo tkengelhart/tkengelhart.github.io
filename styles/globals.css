@@ -2,7 +2,6 @@
   --max-width: 100%;
   --border-radius: 12px;
   --font-mono: 'Genos';
-
 }
 
 
@@ -12,12 +11,10 @@ html {
 
 body {
 font-family:  'Genos' !important;
-margin:0;
-padding:0;
+margin: 0;
 width:100%;
 height: 100%;
 background-color: #171717;
-
 }
 
 a {
@@ -31,18 +28,22 @@ a {
 .linkProps {
   text-decoration: none !important;
   color: inherit;
-  font-size: 20px;
 
 }
 
-
+.projectList {
+  color: #EDEDED;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 'bolder';
+}
 
 .footerStyle {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  
+  height: 8%;
 }
 
 .window {

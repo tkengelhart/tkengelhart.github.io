@@ -25,16 +25,15 @@ const mainAction = { icon: "Contact" };
 
 const actions = [
   {
-    icon: (
+    icon: <FontAwesomeIcon icon={faGithub} />,
+    name: "Github",
+    link: (
       <Link
         className="linkProps"
         target="_blank"
         href="https://github.com/tkengelhart"
-      >
-        <FontAwesomeIcon icon={faGithub} />
-      </Link>
+      />
     ),
-    name: "Github",
   },
   {
     icon: (

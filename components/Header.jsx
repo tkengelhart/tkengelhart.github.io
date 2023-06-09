@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography, Box } from "@mui/material";
 import React from "react";
 import theme from "../src/theme";
 
@@ -8,11 +8,9 @@ const Header = () => {
       <Stack
         direction="column"
         sx={{
-          textAlign: "right",
-          marginRight: 3,
-          padding: 0,
           marginTop: 1,
           flexWrap: true,
+          textAlign: "left",
         }}
       >
         <Typography
