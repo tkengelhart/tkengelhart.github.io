@@ -5,39 +5,29 @@ import theme from "../src/theme";
 const Header = () => {
   return (
     <>
-      <Box
+      <Stack
+        direction="column"
         sx={{
-          pb: 4,
-          height: "100%",
-          pr: 25,
-          pl: 25,
-          pt: 5,
+          marginTop: 1,
+          flexWrap: true,
           textAlign: "left",
         }}
       >
-        <Stack
-          direction="column"
-          sx={{
-            marginTop: 1,
-            flexWrap: true,
-          }}
+        <Typography
+          variant="h3"
+          component="div"
+          sx={{ color: theme.palette.warning.main, fontWeight: "bolder" }}
         >
-          <Typography
-            variant="h3"
-            component="div"
-            sx={{ color: theme.palette.warning.main, fontWeight: "bolder" }}
-          >
-            Tanya Engelhart{" "}
-          </Typography>
-          <Typography
-            variant="h5"
-            component="div"
-            sx={{ color: theme.palette.warning.main, fontWeight: "bolder" }}
-          >
-            full stack software developer
-          </Typography>
-        </Stack>
-      </Box>
+          Tanya Engelhart{" "}
+        </Typography>
+        <Typography
+          variant="h5"
+          component="div"
+          sx={{ color: theme.palette.warning.main, fontWeight: "bolder" }}
+        >
+          full stack software developer
+        </Typography>
+      </Stack>
     </>
   );
 };

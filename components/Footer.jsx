@@ -1,6 +1,6 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
-
+import MenuBar from "../components/MenuBar";
 import theme from "../src/theme";
 
 const Footer = () => {
@@ -9,23 +9,13 @@ const Footer = () => {
       <Box
         className="footerStyle"
         sx={{
-          justifyContent: "flex-end",
           backgroundColor: theme.palette.error.main,
+          pr: 3,
+          pl: 3,
+          position: "fixed",
         }}
       >
-        <Typography
-          component="div"
-          sx={{
-            color: theme.palette.warning.main,
-            fontSize: "24px",
-            fontWeight: "bold",
-            textAlign: "right",
-            justifyContent: "right",
-            pr: 5,
-          }}
-        >
-          &copy; Technical Tanya, 2023
-        </Typography>
+        <MenuBar />
       </Box>
     </>
   );
