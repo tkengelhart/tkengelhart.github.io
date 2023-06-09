@@ -19,8 +19,9 @@ export default function Home() {
         <Header />
         <Project />
         <Skills />
-      <Footer />
       </Grid>
+      <Footer />
+
     </>
   );
 }
