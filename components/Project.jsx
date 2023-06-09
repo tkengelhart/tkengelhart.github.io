@@ -1,19 +1,10 @@
-import React from "react";
-import {
-  List,
-  ListItem,
-  ListItemText,
-  Typography,
-  Stack,
-  Box,
-  Button,
-} from "@mui/material";
-import theme from "../src/theme";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Box, Button, Stack, Typography } from "@mui/material";
+import Link from "next/link";
+import React from "react";
+import theme from "../src/theme";
 import { projects } from "./ProjectList";
-import { Skills } from "./Skills";
 
 export const Project = () => {
   return (
@@ -31,24 +22,30 @@ export const Project = () => {
         >
           Projects
         </Typography>
-        {projects.map((project, i) => (
-          <>
-            <Box
-              sx={{
-                display: "inline-block",
-                mr: 20,
-                ml: 20,
-                overflow: "scroll",
-              }}
-            >
-              <Link
-                key={project.name}
-                className="projectList"
-                target="_blank"
-                href={project.link}
+
+        {projects &&
+          projects.map((project, i) => (
+            <>
+              <Box
+                key={i}
+                sx={{
+                  display: "inline-block",
+                  mr: 20,
+                  ml: 20,
+                  overflow: "scroll",
+                }}
               >
-                {project.name}
-                <FontAwesomeIcon
+                <Link
+                  key={project.name}
+                  className="projectList"
+                  target="_blank"
+                  href={project.link}
+                  prefetch={false}
+                  passHref={true}
+                >
+                  {project.name}
+
+                  {/* <FontAwesomeIcon
                   icon={faLink}
                   size="2xs"
                   style={{
@@ -56,41 +53,48 @@ export const Project = () => {
                     textAlign: " right",
                     marginLeft: "10px",
                   }}
-                />
-                <Box
-                  sx={{
-                    ml: 30,
-                    mt: -4,
-                    mb: 2,
-                    justifyContent: "left",
-                  }}
-                >
-                  <Typography
-                    variant="h6"
+                /> */}
+                  <Box
                     sx={{
-                      color: theme.palette.warning.main,
-                      fontWeight: "bolder",
-                      textAlign: "left",
+                      ml: 30,
+                      mt: -4,
+                      mb: 2,
+                      justifyContent: "left",
                     }}
                   >
-                    {project.about}
-                  </Typography>
-                  <Button sx={{ color: theme.palette.error.main, p: 0, m: 0 }}>
                     <Typography
-                      variant="subtitle1"
+                      variant="h6"
                       sx={{
+                        color: theme.palette.warning.main,
                         fontWeight: "bolder",
                         textAlign: "left",
                       }}
                     >
-                      {project.tech}
+                      {project.about}
                     </Typography>
-                  </Button>
-                </Box>
-              </Link>
-            </Box>
-          </>
-        ))}
+                    <Button
+                      variant="text"
+                      sx={{
+                        color: theme.palette.error.main,
+                        p: 0,
+                        m: 0,
+                      }}
+                    >
+                      <Typography
+                        variant="subtitle1"
+                        sx={{
+                          fontWeight: "bolder",
+                          textAlign: "left",
+                        }}
+                      >
+                        {project.tech}
+                      </Typography>
+                    </Button>
+                  </Box>
+                </Link>
+              </Box>
+            </>
+          ))}
       </Stack>
     </>
   );

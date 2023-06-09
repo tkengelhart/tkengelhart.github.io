@@ -15,7 +15,7 @@ export default function Home() {
         <title>Technical Tanya</title>
         <link rel="icon" href="/monitor.ico" />
       </Head>
-      <Box sx={{ pr: 10, pl: 10, overflow: "scroll", position: 'relative' }}>
+      <Box sx={{ pr: 10, pl: 10, overflow: "scroll", position: "relative" }}>
         <Header />
         <Project />
         <Skills />
