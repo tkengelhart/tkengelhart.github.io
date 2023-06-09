@@ -20,10 +20,9 @@ import { Stack, Typography, Grid } from "@mui/material";
 export const Skills = () => {
   return (
     <>
-     <Grid         container spacing={{ xs: 1, md: 2 }} columns={{ xs: 2, sm: 4, md: 12 }}
- sx={{justifyContent: 'space-evenly', alignItems: 'flex-end'          ,
-     opacity: 0.5,
-
+     <Grid         container spacing={{ xs: 1, md: 2 }} columns={{ xs: 2, sm: 2, md: 4 }}
+ sx={{justifyContent: 'space-evenly', alignItems: 'flex-end',
+     opacity: 0.5, zIndex: 10
 }}>
     
         <Typography
