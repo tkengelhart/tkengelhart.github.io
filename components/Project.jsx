@@ -74,7 +74,7 @@ export const Project = () => {
                       </Typography>
                     </Button>
                     </Link>
-<Divider key={project.name} sx={{color: theme.palette.warning.main}} />
+<Divider key={project.name} sx={{backgroundColor: theme.palette.warning.main}} />
 </>
                      ))}
 
