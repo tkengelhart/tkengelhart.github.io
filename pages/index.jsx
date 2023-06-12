@@ -7,6 +7,7 @@ import SpeedDial from "../components/SpeedDial";
 import Head from "next/head";
 import TabCard from "../components/TabCard";
 import { Skills } from "../components/Skills";
+import About from '../components/About';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
       <Grid container sx={{pr: 10, pl: 10, pt: 5}}>
         <Header />
+        <About />
         <Project />
         <Skills />
       </Grid>
