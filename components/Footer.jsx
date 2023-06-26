@@ -57,7 +57,7 @@ const pages = [
       <Link
         className="linkProps"
         target="_blank"
-        href="https://drive.google.com/file/d/1Jx_awWidMr2_mxJZj1t9dwHe1ylSHrzo/view?usp=sharing"
+        href="https://drive.google.com/file/d/1BBfyGUQQ15ogJ8R35DO1NGxDb6lyCu3z/view?usp=sharing"
       >
         <Typography
           sx={{ color: theme.palette.warning.main, fontWeight: "bolder" }}
