@@ -1,4 +1,4 @@
-import { Button, Grid, Typography, Divider } from "@mui/material";
+import { Button, Stack, Typography, Divider } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 import theme from "../src/theme";
@@ -8,7 +8,7 @@ export const Project = () => {
   return (
     <>
     
-    <Grid container spacing={{ xs: 1, md: 2 }} columns={{ xs: 2, sm: 4, md: 12 }}
+    <Stack container spacing={{ xs: 1, md: 2 }} columns={{ xs: 2, sm: 4, md: 12 }}
       direction="column" sx={{pt: 5, pl: 5}}>     
           
           <Typography
@@ -33,7 +33,7 @@ export const Project = () => {
                   prefetch={false}
                   passHref={true}
                 >
-          <Grid key={project.about} item  xs={1} sm={2} md={4}
+          <Stack key={project.about} item  xs={1} sm={2} md={4}
 
             sx={{justifyContent: 'left'}}
              > <Typography
@@ -54,7 +54,7 @@ export const Project = () => {
                     >
                       {project.about}
                     </Typography>
-                    </Grid>
+                    </Stack>
 
                     <Button
                       variant="text"
@@ -78,7 +78,7 @@ export const Project = () => {
 </>
                      ))}
 
-</Grid>
+</Stack>
               
                           
 
