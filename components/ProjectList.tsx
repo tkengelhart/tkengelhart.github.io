@@ -14,13 +14,6 @@ export const projects = [
   },
 
   {
-    name: "React Calculator",
-    image: "/photos/calculator.jpg",
-    link: "https://exquisite-bubblegum-181887.netlify.app/",
-    about: "Simple calculator I re-made using React framework.",
-    tech: "React • JavaScript",
-  },
-  {
     name: "WeGo Travel",
     image: "/photos/travel.jpg",
     link: "https://github.com/tkengelhart/wego_travel",
@@ -38,9 +31,9 @@ export const projects = [
   },
 ];
 
-const [seed, calculator, travel, polish] = projects;
+const [seed, travel, polish] = projects;
 
-export const initialProjects = [seed, calculator, travel, polish];
+export const initialProjects = [seed, travel, polish];
 
 export function getNextProject(projects: Project[]): Project | undefined {
   const current = new Set(projects);
