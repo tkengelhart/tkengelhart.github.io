@@ -33,56 +33,81 @@ export const Skills = () => {
             fontWeight: "bolder",
           }}
         >
-          Skills
+          Technologies used
         </Typography>
         <FontAwesomeIcon
-          icon={faJsSquare}
+          icon={faAtlassian}
           style={{ color: theme.palette.error.main, fontSize: "35px" }}
+          aria-label="Atlassian"          title="Atlassian"
+
+        />
+            <FontAwesomeIcon
+          icon={faBootstrap}
+          style={{ color: theme.palette.error.main, fontSize: "35px" }}
+          aria-label="Bootstrap"
+          title="Bootstrap"
+        />
+          <FontAwesomeIcon
+          icon={faCss3}
+          style={{ color: theme.palette.error.main, fontSize: "35px" }}
+          aria-label="CSS"
+          title="CSS"
+        />
+   
+             <FontAwesomeIcon
+          icon={faGit}
+          style={{ color: theme.palette.error.main, fontSize: "35px" }}
+          aria-label="Git"
+          title="Git"
         />
         <FontAwesomeIcon
           icon={faGithub}
           style={{ color: theme.palette.error.main, fontSize: "35px" }}
+          aria-label="Github"
+          title="Github"
         />
+                 <FontAwesomeIcon
+          icon={faHtml5}
+          style={{ color: theme.palette.error.main, fontSize: "35px" }}
+          aria-label="HTML"
+          title="HTML"
+        />
+  
+           <FontAwesomeIcon
+          icon={faJsSquare}
+          style={{ color: theme.palette.error.main, fontSize: "35px" }}
+          aria-label="Javascript"
+          title="Javascript"
+        />
+                     <FontAwesomeIcon
+          icon={faNodeJs}
+          style={{ color: theme.palette.error.main, fontSize: "35px" }}
+          aria-label="Nodejs"
+          title="Nodejs"
+        />
+   
         <FontAwesomeIcon
           icon={faReact}
           style={{ color: theme.palette.error.main, fontSize: "35px" }}
+          aria-label="React"
+          title="React"
         />
-        <FontAwesomeIcon
-          icon={faHtml5}
-          style={{ color: theme.palette.error.main, fontSize: "35px" }}
-        />
+    
         <FontAwesomeIcon
           icon={faSlack}
           style={{ color: theme.palette.error.main, fontSize: "35px" }}
+          aria-label="Slack"
+          title="Slack"
         />
-        <FontAwesomeIcon
-          icon={faNodeJs}
-          style={{ color: theme.palette.error.main, fontSize: "35px" }}
-        />
-        <FontAwesomeIcon
-          icon={faAtlassian}
-          style={{ color: theme.palette.error.main, fontSize: "35px" }}
-        />
-        <FontAwesomeIcon
-          icon={faGit}
-          style={{ color: theme.palette.error.main, fontSize: "35px" }}
-        />
-        <FontAwesomeIcon
-          icon={faCss3}
-          style={{ color: theme.palette.error.main, fontSize: "35px" }}
-        />
-        <FontAwesomeIcon
-          icon={faNpm}
-          style={{ color: theme.palette.error.main, fontSize: "35px" }}
-        />
+ 
+    
+   
+  
         <FontAwesomeIcon
           icon={faTrello}
           style={{ color: theme.palette.error.main, fontSize: "35px" }}
         />
-        <FontAwesomeIcon
-          icon={faBootstrap}
-          style={{ color: theme.palette.error.main, fontSize: "35px" }}
-        />
+    
       </Grid>
     </>
   );

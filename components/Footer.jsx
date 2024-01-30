@@ -28,6 +28,22 @@ const pages = [
       <Link
         className="linkProps"
         target="_blank"
+        href="https://github.com/tanyaJLG"
+      >
+        <Typography
+          sx={{ color: theme.palette.warning.main, fontWeight: "bolder" }}
+          variant="h6"
+        >
+          Github (work)
+        </Typography>
+      </Link>
+    ),
+  },
+  {
+    name: (
+      <Link
+        className="linkProps"
+        target="_blank"
         href="https://www.linkedin.com/in/tanyaengelhart/"
       >
         {" "}
@@ -79,7 +95,7 @@ const pages = [
           sx={{ color: theme.palette.warning.main, fontWeight: "bolder" }}
           variant="h6"
         >
-          Schedule
+          Let's talk!
         </Typography>
       </Link>
     ),

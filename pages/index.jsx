@@ -18,7 +18,7 @@ export default function Home() {
       <Grid container sx={{pr: 10, pl: 10, pt: 5}}>
         <Header />
         <Project />
-        <Skills />
+        {/* <Skills /> */}
       </Grid>
       <Footer />
 
